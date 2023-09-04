@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#pokemon-name-serach{
+    width: 25rem;
+    height: 2rem;
+    margin: 8px 0;
+}
+@media screen and (max-width: 500px){
+    #pokemon-name-serach{
+        width: 20rem;
+        height: 1.8rem;
+    }
+}
