@@ -33,6 +33,10 @@ function PokemonList() {
             {(isLoading) ? 'Loading....' :
                 pokemonList.map((p) => <Pokemon name={p.name} image={p.image} key={p.id} />)
             }
+            <div className="controls">
+                <button>Prev</button>
+                <button>Next</button>
+            </div>
         </>
     )
 }
