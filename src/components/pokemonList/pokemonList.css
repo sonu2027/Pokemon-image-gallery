@@ -9,3 +9,17 @@
     margin: 1rem 0.5rem;
     padding: 0.6rem 2rem;
 }
+.all-pokemon{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@media screen and (max-width:1100px){
+    .all-pokemon{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width:725px){
+    .all-pokemon{
+        grid-template-columns: 1fr;
+    }
+}

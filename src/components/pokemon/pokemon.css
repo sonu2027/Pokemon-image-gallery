@@ -10,8 +10,11 @@
     margin: 1.8rem 0;
     row-gap: 0.8rem;
 }
-.pokemon:hover{
+img:hover{
     background-color: #f2eaea;
+}
+img{
+    scale: 0.8;
 }
 @media screen and (max-width:500px){
     img{
@@ -19,5 +22,11 @@
     }
     .pokemon{
         margin: 1rem 0;
+        width: 80vw;
+    }
+}
+@media screen and (max-width:850px){
+    img{
+        scale: 0.6;
     }
 }

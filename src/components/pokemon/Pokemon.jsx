@@ -5,7 +5,6 @@ function Pokemon({ name, image }) {
             <img src={image} alt="Pokemon Image" />
             <div>{name}</div>
         </div>
-
     )
 }
 export default Pokemon
