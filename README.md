@@ -1,8 +1,7 @@
-# React + Vite
+Web app name: Pokemon image gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Technology used: React.js
 
-Currently, two official plugins are available:
+Description: Using an api (https://pokeapi.co/api/v2/pokemon/) which fetch all the pokemon images and able to show the image and the description each image
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live url link: https://pokemonimagegallery.vercel.app/
