@@ -1,0 +1,45 @@
+.pokemon-details-wrapper{
+    display: flex;
+    padding: 1rem;
+    background-color: rgb(52, 52, 126);
+    width: 90vw;
+    margin-top: 1.5rem;
+    border-radius: 4px;
+    justify-content: space-around;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pokemon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.pokemon-height, .pokemon-weight, .pokemon-types, .pokemon-name{
+    font-size: 1.5rem;
+    color: #fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width:600px){
+    html{
+        font-size: 80%;
+    }
+    .pokemon-details-wrapper{
+        padding:1rem 0;
+    }
+    .pokemon-image{
+        width: 16rem;
+    }
+}
