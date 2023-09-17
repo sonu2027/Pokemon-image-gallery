@@ -5,6 +5,7 @@ import "./pokemonDetails.css"
 function PokemonDetails() {
     const { id } = useParams()
     const [pokemon, setPokemon] = useState({})
+
     async function downloadPokemon() {
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
         console.log("r", response);
@@ -17,9 +18,11 @@ function PokemonDetails() {
         })
         console.log(pokemon.name, pokemon.image, pokemon.height, pokemon.weight, pokemon.types)
     }
+
     useEffect(() => {
         downloadPokemon()
     }, [])
+
     return (
         <div className="pokemon-details-wrapper">
             <div id="pokemon">
