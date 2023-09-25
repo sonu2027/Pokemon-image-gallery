@@ -1,15 +1,11 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useState, useEffect } from "react";
 import axios from "axios";
-import "./pokemonDetails.css"
-function PokemonDetails() {
-    const { id } = useParams()
-    console.log("id", id);
+function SearchedPokemon(props) {
     const [pokemon, setPokemon] = useState({})
 
     async function downloadPokemon() {
-        
-        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${props.inputText}`)
 
         console.log("r", response);
         setPokemon({
@@ -24,7 +20,7 @@ function PokemonDetails() {
 
     useEffect(() => {
         downloadPokemon()
-    }, [])
+    }, [props.inputText])
 
     return (
         <div className="pokemon-details-wrapper">
@@ -43,4 +39,4 @@ function PokemonDetails() {
 
     )
 }
-export default PokemonDetails
+export default SearchedPokemon
