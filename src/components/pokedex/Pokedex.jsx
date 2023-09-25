@@ -3,7 +3,7 @@ import PokemonList from "../pokemonList/PokemonList.jsx"
 import Search from "../search/Search.jsx"
 import "./Pokedex.css"
 import { useState } from "react"
-import SearchedPokemon from "../searchedPokemon/searchedPokemon.jsx"
+import Poke from "../poke/Poke.jsx"
 
 function Pokedex(){
     const [searchTerm, setSearchTerm]=useState("")
@@ -12,7 +12,7 @@ function Pokedex(){
         <Link to="./"><h1>Pokedex</h1></Link>
         <Search updateSearchTerm={setSearchTerm} />
         {searchTerm}
-        {searchTerm.length==0?<PokemonList/>:<SearchedPokemon inputText={searchTerm} />}
+        {searchTerm.length==0?<PokemonList/>:<Poke inputText={searchTerm} />}
         </div>
     )
 }

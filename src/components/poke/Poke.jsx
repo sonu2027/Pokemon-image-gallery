@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-function SearchedPokemon(props) {
+function Poke(props) {
     const [pokemon, setPokemon] = useState({})
 
     async function downloadPokemon() {
 
-        try {
+        // try {
             const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${props.inputText}`)
 
             console.log("r", response);
@@ -17,10 +17,10 @@ function SearchedPokemon(props) {
                 types: response.data.types.map((t) => t.type.name)
             })
             console.log(pokemon.name, pokemon.image, pokemon.height, pokemon.weight, pokemon.types)
-        }
-        catch (error) {
-            console.error("Error fetching Pokemon data:", error);
-        }
+        // }
+        // catch (error) {
+        //     console.error("Error fetching Pokemon data:", error);
+        // }
     }
     useEffect(() => {
         downloadPokemon()
@@ -43,4 +43,4 @@ function SearchedPokemon(props) {
 
     )
 }
-export default SearchedPokemon
+export default Poke
