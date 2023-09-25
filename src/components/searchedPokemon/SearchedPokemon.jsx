@@ -5,19 +5,23 @@ function SearchedPokemon(props) {
 
     async function downloadPokemon() {
 
-        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${props.inputText}`)
+        try {
+            const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${props.inputText}`)
 
-        console.log("r", response);
-        setPokemon({
-            name: response.data.name,
-            image: response.data.sprites.other.dream_world.front_default,
-            weight: response.data.weight,
-            height: response.data.height,
-            types: response.data.types.map((t) => t.type.name)
-        })
-        console.log(pokemon.name, pokemon.image, pokemon.height, pokemon.weight, pokemon.types)
+            console.log("r", response);
+            setPokemon({
+                name: response.data.name,
+                image: response.data.sprites.other.dream_world.front_default,
+                weight: response.data.weight,
+                height: response.data.height,
+                types: response.data.types.map((t) => t.type.name)
+            })
+            console.log(pokemon.name, pokemon.image, pokemon.height, pokemon.weight, pokemon.types)
+        }
+        catch (error) {
+            console.error("Error fetching Pokemon data:", error);
+        }
     }
-
     useEffect(() => {
         downloadPokemon()
     }, [props.inputText])
