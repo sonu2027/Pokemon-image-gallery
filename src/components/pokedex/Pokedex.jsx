@@ -9,7 +9,7 @@ function Pokedex(){
     const [searchTerm, setSearchTerm]=useState("")
     return (
         <div className="pokedex-wrapper">
-        <Link to="./"><h1>Pokedex</h1></Link>
+        <Link to="./"><h1>Find your Pokemon</h1></Link>
         <Search updateSearchTerm={setSearchTerm} />
         {searchTerm}
         {searchTerm.length==0?<PokemonList/>:<Poke inputText={searchTerm} />}
